@@ -1,25 +1,14 @@
 package Test;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.ArrayList;
 
 public class Test {
 
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args){
 		// TODO Auto-generated method stub
-		int c;
-		try {
-			InputStream inputStream = new LowerCaseInputStream(new BufferedInputStream(new FileInputStream("test.txt")));
-			while ((c=inputStream.read())>=0) {
-				System.out.println((char)c);
-			}
-			
-			inputStream.close();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+		ArrayList<String> strings = new A().get();
+		for (String string : strings) {
+			System.out.println(string);
 		}
 		
 	}
